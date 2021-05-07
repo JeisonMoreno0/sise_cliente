@@ -30,7 +30,7 @@
         <ion-list >
           <ion-item menuclose [hidden]="!isRemainder" [routerLink]="['/info-personal']"
              menuClose class="sub-menu">
-            <ion-icon color="light" name="person-outline" slot="end"></ion-icon>
+            <ion-icon color="light" name="person-outline" slot="start"></ion-icon>
             <ion-label color="light">Información personal</ion-label>
           </ion-item>
         </ion-list>
@@ -40,7 +40,7 @@
         <ion-list >
           <ion-item menuclose [hidden]="!isRemainder" [routerLink]="['/info-academica']"
              menuClose class="sub-menu">
-            <ion-icon  color="light" name="school-outline" slot="end"></ion-icon>
+            <ion-icon  color="light" name="school-outline" slot="start"></ion-icon>
             <ion-label color="light">Información académica</ion-label>
           </ion-item>
         </ion-list>
@@ -50,7 +50,7 @@
         <ion-list >
           <ion-item menuclose [hidden]="!isRemainder" [routerLink]="['/info-laboral']"
              menuClose class="sub-menu">
-            <ion-icon  color="light" name="briefcase-outline" slot="end"></ion-icon>
+            <ion-icon  color="light" name="briefcase-outline" slot="start"></ion-icon>
             <ion-label color="light">Información laboral</ion-label>
           </ion-item>
         </ion-list>
@@ -60,7 +60,7 @@
         <ion-list >
           <ion-item menuclose [hidden]="!isRemainder" [routerLink]="['/info-empresarial']"
              menuClose class="sub-menu">
-            <ion-icon  color="light" name="business-outline" slot="end"></ion-icon>
+            <ion-icon  color="light" name="business-outline" slot="start"></ion-icon>
             <ion-label color="light">Información empresarial</ion-label>
           </ion-item>
         </ion-list>
@@ -82,11 +82,9 @@
        <ion-menu-toggle>
          
       
-        <!--<ion-item >-->
-          <ion-button class = "boton-cerrar" expand="block"  (click)="logout()">Cerrar Sesion</ion-button>
-        <!--  <ion-icon name="map-outline" slot ="start"></ion-icon>  
-        <ion-label>Contactar egresado</ion-label> -->
-        <!--</ion-item>-->
+        
+      <ion-button class = "boton-cerrar" expand="block"  (click)="logout()">Cerrar Sesion</ion-button>
+        
       
       </ion-menu-toggle>
 

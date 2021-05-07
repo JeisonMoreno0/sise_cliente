@@ -8,6 +8,7 @@ describe('CarnetVirtualPage', () => {
   let fixture: ComponentFixture<CarnetVirtualPage>;
 
   beforeEach(async(() => {
+    
     TestBed.configureTestingModule({
       declarations: [ CarnetVirtualPage ],
       imports: [IonicModule.forRoot()]

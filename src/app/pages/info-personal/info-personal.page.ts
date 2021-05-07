@@ -4,6 +4,8 @@ import { AlertController, LoadingController } from '@ionic/angular'
 import { ActionSheetController } from '@ionic/angular';
 import { __await } from 'tslib';
 import { MatIconRegistry } from '@angular/material/icon';
+import {FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms'
+
 
 
 
@@ -17,12 +19,40 @@ import { MatIconRegistry } from '@angular/material/icon';
 
 
 export class InfoPersonalPage {
+
+  usuario = new FormGroup({
+    
+    redSocial1 : new FormControl('',Validators.required,),
+    correo: new FormControl('',Validators.email),
+    telefono : new FormControl('',[
+      Validators.required,
+      Validators.pattern("^[0-9]*$"),
+      Validators.maxLength(10),
+    ]),
+    estrato : new FormControl('',Validators.required,),
+    estadoCivil : new FormControl('',Validators.required,),
+    pais : new FormControl('',Validators.required,),
+    
+  });  
+
+
+
+
+   // correo = new FormControl('',Validators.email);
+    
+    
+    
+ 
+
   paises;
   localidades;
   opcionSeleccionado: string  = '0';
   verSeleccion: string        = '';  
-
-  constructor( ) {
+  
+  constructor(public formBuilder:FormBuilder ) {
+ 
+ 
+ 
     this.paises = [
       "Afganistán",
       "Albania",
@@ -294,6 +324,9 @@ export class InfoPersonalPage {
   ngOnInit() {
   } 
 
+  guardarDatos(){
+    console.log(this.usuario.value);
+  }
 
   
   

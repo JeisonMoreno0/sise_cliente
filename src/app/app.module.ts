@@ -6,7 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Camera } from '@ionic-native/camera/ngx';
-
+import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -14,6 +14,8 @@ import { ImplicitAutenticationService } from './@core/utils/implicit_autenticati
 import { ComponentsModule } from './@theme/components/components.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+
+import {BarcodeScanner} from '@ionic-native/barcode-scanner/ngx';
 
 
 @NgModule({
@@ -25,9 +27,12 @@ import { MatIconModule } from '@angular/material/icon';
      ComponentsModule, NoopAnimationsModule, MatIconModule,
     ],
   providers: [
+    
     StatusBar, 
     Camera, 
-    SplashScreen,
+    QRScanner ,
+    BarcodeScanner,
+     SplashScreen, 
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     ImplicitAutenticationService,
     { provide: APP_BASE_HREF, useValue: '/' }

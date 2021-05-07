@@ -9,6 +9,82 @@
 </ion-header>
 
 
-<ion-content class="background">
-  <img class ="imagen" src="assets/Carnet.JPG">
+<ion-content >
+  <!-- <img class ="imagen" src="assets/Carnet.JPG"> -->
+  <ion-card>
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img class ="imagenUdistrital" src="assets/escudo_udistrital.jpg" > 
+          </ion-col>
+          <ion-col>
+            <ion-label class="titulo">Universidad Distrital Francisco Jose de Caldas</ion-label>
+            <ion-card-subtitle>Alcadia de Bogota</ion-card-subtitle>
+          </ion-col>
+          <ion-col>
+            <img class ="imagenBogota" src="assets/escudo_bogota.jpg" >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col offset-4>
+            <div>
+              <ion-label class="texto" position="floating">Nombre: </ion-label>
+              <ion-input type="text">{{nombre}}</ion-input>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div> 
+              <ion-avatar>
+                <img src="../assets/avatar.png" class="foto">
+              </ion-avatar>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-label class="texto" position="floating">Cedula: </ion-label>
+              <ion-input type="text">{{cedula}}</ion-input>
+            </div>
+          </ion-col>
+          <ion-col offset-4>
+            <div>
+              <ion-label class="texto" position="floating">Egresado: </ion-label>
+              <ion-input type="text">{{egresado}}</ion-input>
+            </div>
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+
+      <ion-item class = "qrcode" *ngIf="createdCode">
+        <ngx-qrcode [value]="createdCode">
+        </ngx-qrcode>
+      </ion-item>
+    
+    </ion-card-content>
+  </ion-card>
+
+
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col> 
+        <ion-button class="boton"  (click)="createCode()" color="primary">Generar carnet virtual</ion-button>  
+      </ion-col>
+      <ion-col>
+        <ion-button class="boton"  (click)="createCode()" color="primary">Descargar carnet virtual</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  
+  
+
 </ion-content>

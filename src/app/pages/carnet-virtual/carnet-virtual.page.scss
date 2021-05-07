@@ -1,4 +1,46 @@
-.imagen{
-    margin-left: width/3;
-    margin-top: length/3;
+.imagenUdistrital{
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin-left: 50px;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.texto{
+margin-left: 15%;
+}
+.imagenBogota{
+    width: 80px; 
+    height: 80px;
+    margin-right: 20%;
+    display: block;
+    
+}
+
+.qrcode{
+    margin-left: 30%;
+    display:block;
+margin:auto;
+}
+
+.foto{
+    margin-left: 100px;
+}
+
+.boton{
+    display: block;
+    margin:10px auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.qrcode{
+    background-image: none;
+    margin: auto;
+}
+ion-card{
+    margin-left: 100px;
+    margin-right: 100px;
 }

@@ -12,21 +12,21 @@ import { ImplicitAutenticationService } from './app/@core/utils/implicit_autenti
 import {defineCustomElements} from '@ionic/pwa-elements/loader'
 
 
-// if (environment.production) {
-//  enableProdMode();
-// }
-// const autenticacion = new ImplicitAutenticationService;
+ if (environment.production) {
+  enableProdMode();
+ }
+ const autenticacion = new ImplicitAutenticationService;
 
 
 
 const isButtonLogin = false;
 
-// if (!autenticacion.getAuthorizationUrl(isButtonLogin)) {
+ if (!autenticacion.getAuthorizationUrl(isButtonLogin)) {
 
-//  } else {
-//    autenticacion.live();
+  } else {
+    autenticacion.live();
 
-//         } 
+         } 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 
